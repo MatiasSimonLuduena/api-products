@@ -8,6 +8,7 @@ import cors from "cors";
 
 // imports routes
 import products from "./routes/productsRoutes.js";
+import categories from "./routes/categoriesRoutes.js";
 
 // methods
 const app = express();
@@ -33,6 +34,7 @@ mongoose.connect(process.env.MONGODB_URL, {
 
 // routes
 app.use("/api/products", products);
+app.use("/api/categories", categories);
 
 // init server
 const port = process.env.PORT;
